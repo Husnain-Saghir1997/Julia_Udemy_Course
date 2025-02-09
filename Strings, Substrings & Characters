@@ -1,0 +1,134 @@
+### A Pluto.jl notebook ###
+# v0.20.3
+
+using Markdown
+using InteractiveUtils
+
+# ╔═╡ 41aef59f-3629-49a1-af7a-1025f3c6f4c4
+md"""
+# Strings and Characters
+
+🔭 Now we move to strings and characters
+💡 
+"""
+
+# ╔═╡ e3298008-2a40-45f9-b20c-0b27564c72b7
+begin
+	s = "Julia's World"
+	length(s)
+	s[3:13] # See what i did there, Julia's world is now in the possession of Lia.
+end
+
+# ╔═╡ d079cb00-0eb1-4650-ac02-bbaf27c1607e
+begin
+	'u'
+	typeof('5') # '' are used to present characters and only contain one value or letter.
+end
+
+# ╔═╡ 4414344f-fb8e-4a1a-afbf-bb9b3155208f
+supertype(supertype(typeof(Char)))
+
+# ╔═╡ 7af04fb4-020c-46bb-9e3e-79b22cb455a0
+begin
+	isdigit('h')
+	'h' |> isletter # same way of doing. Passing object to function.
+	'h' |> isuppercase
+	'h' |> islowercase
+end
+
+# ╔═╡ eae63350-e734-4d01-908a-188b3f04491d
+md"""
+## Strings and SubStrings
+"""
+
+# ╔═╡ 4d444f4a-ad29-48dc-af45-839984ededde
+begin
+	str = "Sunny day! Time to get the hay into the barn"
+	print(str)
+	str1 = "\nSunny day! Time to get the \"hay\" into the barn" # \n new line character || \"blahblahblah\" for double quoted text in a string
+	print(str1)
+	strr = """\nWe should be more curious in our "view" of this natural world.
+	Instead of going along the long held believes, we should try to check and modify them if necessary or replace them alltogether.""" # Triple quotes allow for multiple lines as well as quotoation marks.
+	print(strr)
+end
+
+# ╔═╡ 01ec0dc0-45c9-43ee-9ec3-307615533dc5
+md"""
+##### Concatenated strings
+"""
+
+# ╔═╡ 26793bd5-4833-4e8b-b20c-ad7b27f3011f
+begin
+	# Concatenated string are just awesome. Like a fresh gust of air on a difficult hike.
+	b1 = "mar"
+	b2 = "velous"
+	print("Once there were two brothers named as mar and velous, together they were known as ", b1 , b2, ".")
+	print("\nOnce there were two brothers named as mar and velous, together they were known as "* b1 * b2* ".") # same thing 2 different ways to do it. 
+end
+
+# ╔═╡ 6e0df5b1-ee5f-4ee6-94ce-45d1e1e41510
+md"""
+#### String: Interpolation"""
+
+# ╔═╡ 8a6b8713-b9fd-469d-94d8-9fc5624bb001
+begin
+	p1 = "The sun"
+	p2 = "cutie earth"
+	time = 8 
+	amount = "a lot"
+	light = "  $p1 supplies the $p2 $amount of sunlight everyday in about $time light minutes."
+	#light = raw"$p1 supplies the $p2 $amount of sunlight everyday in about $time light minutes."
+	print(light)
+end
+
+# ╔═╡ 4da1e5de-8b19-4a46-b313-0eac923b3019
+md""" 
+#### Substrings """
+
+# ╔═╡ 38c32ef4-4c36-47a3-80e3-893d23acdf2f
+begin
+	# we can get a part of a larger string by using this.
+	print(SubString(light, 22,26)) 
+	
+	print(chop(light, head = 3, tail = 25)) # Chops using an axe the values outside the head and tail.
+	
+	print(chomp(light[1:10])) # Gives the values from indexed points only. Like extraction.
+	
+	print(strip(light[1:25])) #removes the leading spaces and new lines
+end
+
+# ╔═╡ 8306c76c-4889-43a0-bc62-6195618bcf5d
+begin
+	print(split(light, 'u')) #splits the main string according to the Character 
+	
+	print(split(light, "lot")) #splits the main string according to the string
+	
+	words = split(light) # splits the whole string into jus letters joined together. 
+	
+	join(words, "_") # rejoins the words back together with the option of using a separator. "Inqilab_The_separatists_Movement"
+end
+
+# ╔═╡ 9bcaa09c-64f8-4df3-90dd-f005186a7932
+md"""
+## Characters (Not firecrackers 🧨)"""
+
+# ╔═╡ 2244ef26-1b9f-4c57-972c-259b9315794e
+
+
+# ╔═╡ Cell order:
+# ╟─41aef59f-3629-49a1-af7a-1025f3c6f4c4
+# ╠═e3298008-2a40-45f9-b20c-0b27564c72b7
+# ╠═d079cb00-0eb1-4650-ac02-bbaf27c1607e
+# ╠═4414344f-fb8e-4a1a-afbf-bb9b3155208f
+# ╠═7af04fb4-020c-46bb-9e3e-79b22cb455a0
+# ╟─eae63350-e734-4d01-908a-188b3f04491d
+# ╠═4d444f4a-ad29-48dc-af45-839984ededde
+# ╟─01ec0dc0-45c9-43ee-9ec3-307615533dc5
+# ╠═26793bd5-4833-4e8b-b20c-ad7b27f3011f
+# ╠═6e0df5b1-ee5f-4ee6-94ce-45d1e1e41510
+# ╠═8a6b8713-b9fd-469d-94d8-9fc5624bb001
+# ╟─4da1e5de-8b19-4a46-b313-0eac923b3019
+# ╠═38c32ef4-4c36-47a3-80e3-893d23acdf2f
+# ╠═8306c76c-4889-43a0-bc62-6195618bcf5d
+# ╟─9bcaa09c-64f8-4df3-90dd-f005186a7932
+# ╠═2244ef26-1b9f-4c57-972c-259b9315794e
