@@ -1,0 +1,45 @@
+# ╔═╡ edbbd558-1d15-4445-8294-36a34a556e3a
+a = 15
+
+# ╔═╡ 6f2d4b1d-ca5f-43c7-ba30-572bf4cfb8d7
+b = 6
+
+# ╔═╡ bc3acb01-5b6c-414c-8cd9-8f41dcc4acf7
+c = 25.5
+
+# ╔═╡ 2f256811-d453-4e1a-a23f-ba1d0b519226
+d = 5.5
+
+# ╔═╡ daf713c8-107b-446c-b3fb-9511c7a3b2ab
+p = 2//3
+
+# ╔═╡ 77dad91e-31b9-4fbb-a4c5-ce6de0ca1109
+q = 4//5
+
+# ╔═╡ bf7d33c1-4bfd-430b-9887-d33d283fb099
+supertype(supertype(typeof(Rational)))
+
+# ╔═╡ 0ee4adab-9caa-4f21-b500-6b0bba7adf53
+print(subtypes(Any))
+
+# ╔═╡ 28d5fd9b-04f1-4c71-9ec3-18d7497fbec9
+sqrt(sin(a + b +c))
+
+# ╔═╡ d75ac00c-fcdf-4aa6-b5e8-9fef2b8ab8af
+(sqrt ∘ sin ∘ +)(a, b, c)
+
+# ╔═╡ d6ce9ded-5fe4-4faa-8e7e-683a2794cc97
+3*a*c+4*b*q
+
+# ╔═╡ cf0a0494-6020-4523-ac6f-9f9ce02bb570
+3a*c+4b*q # See same result
+
+# ╔═╡ aa3033c1-d32b-4444-a155-67cba73c4048
+begin
+	x = 10 # Assignment operator
+	x += 2
+	x -+ 2
+	x *= 2
+	x /= 2
+	x ÷= 2
+end
