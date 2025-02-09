@@ -1,0 +1,96 @@
+### A Pluto.jl notebook ###
+# v0.20.3
+
+using Markdown
+using InteractiveUtils
+
+# ╔═╡ 5565a0b8-6d3f-4ecd-8220-b4ac77338072
+# 💡 Comparison Operators
+md"""
+# Julia Learning Session on Comparison Operators 
+
+by Husnain Saghir.
+
+🔭 This is based on a Udemy Course
+## Model of the environment
+
+💡 A fine morning and the _weather_ is pleasant. Let's get some $work$ done.
+
+!!! example
+	Next, focus is on comparison Operators in Julia.
+"""
+
+# ╔═╡ c959aef0-334f-48f8-9ce8-eaa3f45ef3f2
+begin
+	Int(true)
+	Int(false)
+	Bool(1)
+	Bool(0)
+end
+
+# ╔═╡ ac73007c-c5e1-49fb-a02a-57bb02a45efb
+begin
+	isinf(5/0) #predicate functions
+	isodd(39)
+	iseven(0)
+	isletter('f')
+end
+
+# ╔═╡ d86c783b-c7c6-4971-9db9-0ec1921fceb8
+5 in [4, 5.0, 6] #Membership operator(Checks value in something and return Bool) 
+
+# ╔═╡ 0aa4a7d6-bfe9-4ed9-bfab-1cc3dc481bc0
+25.1 isa Float64 # Checks datatype and return Bool value
+
+# ╔═╡ 4faf5fdf-0632-48e5-8381-767361b5221d
+begin
+	# Comparison Operators let's you values. Dah Dude. What a revelation
+	p = 34; q = 34.0; r = 98 
+	
+	p == q # Comparison operator
+	p != q
+	isequal(p, q)
+	p === q # Strict equality check operator meaning also checks the same data type (Kinda Nationality check 😂 🐢)  
+end
+
+# ╔═╡ fc405e5d-386b-40fe-b4bd-1e66b114e491
+begin
+	'a' > 'c' # To check alphabetically 
+	"Aladin"<"Arise"# Is it appears first in dictionary 
+end
+
+# ╔═╡ 870e1d0b-aef4-47ab-a760-890cd22b583f
+# 💡 Comparison Operators
+md"""
+	Next, focus is on Logic Operators in Julia.
+"""
+
+# ╔═╡ fc0b9942-9588-4807-b885-fed69364b1d1
+!true # Not operator
+
+# ╔═╡ e92fca05-3e07-4b3d-bbd3-da1e3ceee763
+true && false #AND operator
+
+# ╔═╡ 0548447d-892e-4f04-82d1-aa6ce6c3f169
+true || false # OR operator
+
+# ╔═╡ 767f6c77-3fb1-4ccc-bbd8-b754eb16adb2
+p == q || p == r
+
+# ╔═╡ be14e924-c516-49af-8da2-d1e3b906f1de
+p == q && p == r
+
+# ╔═╡ Cell order:
+# ╠═5565a0b8-6d3f-4ecd-8220-b4ac77338072
+# ╠═c959aef0-334f-48f8-9ce8-eaa3f45ef3f2
+# ╠═ac73007c-c5e1-49fb-a02a-57bb02a45efb
+# ╠═d86c783b-c7c6-4971-9db9-0ec1921fceb8
+# ╠═0aa4a7d6-bfe9-4ed9-bfab-1cc3dc481bc0
+# ╠═4faf5fdf-0632-48e5-8381-767361b5221d
+# ╠═fc405e5d-386b-40fe-b4bd-1e66b114e491
+# ╠═870e1d0b-aef4-47ab-a760-890cd22b583f
+# ╠═fc0b9942-9588-4807-b885-fed69364b1d1
+# ╠═e92fca05-3e07-4b3d-bbd3-da1e3ceee763
+# ╠═0548447d-892e-4f04-82d1-aa6ce6c3f169
+# ╠═767f6c77-3fb1-4ccc-bbd8-b754eb16adb2
+# ╠═be14e924-c516-49af-8da2-d1e3b906f1de
