@@ -1,0 +1,13 @@
+begin
+    # Complex number: Here we go
+  c1 = 4
+	c2 = 4 + 3im
+	c3 = complex(4, 2) # Different ways to represent complexes. 
+	c3r = real(c3)
+	absolute = abs(c3)
+	@show c1
+	@show (c3r)
+	@show imag(c3)
+  @show c2
+	@show c3
+end
